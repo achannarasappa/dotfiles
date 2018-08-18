@@ -1,6 +1,5 @@
 export TERM="screen-256color"
 export PATH="$HOME/.local/bin:$HOME/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-export NVM_LAZY_LOAD=true
 
 autoload -U colors && colors
 
@@ -44,6 +43,12 @@ antigen apply
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/repositories/go"
 export PATH="$PATH:$GOROOT/bin"
+ 
+##
+# Keybindings
+##
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 ##
 # Completion
