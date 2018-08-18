@@ -8,9 +8,9 @@ autoload -U colors && colors
 ##
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-   source $HOME/antigen.zsh
+  source $HOME/antigen.zsh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-   source $(brew --prefix)/share/antigen/antigen.zsh
+  source $(brew --prefix)/share/antigen/antigen.zsh
 fi
 
 # Geneal Plugins
@@ -79,8 +79,13 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate # l
 ##
 
 # General
-alias clip='xclip -sel clip'
-alias paste='xclip -o'
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  alias copy='xclip -sel clip'
+  alias paste='xclip -o -sel clip'
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  alias copy='pbcopy'
+  alias paste='pbpaste'
+fi
 alias dir='echo "${PWD##*/}"'
 alias e='code'
 
@@ -88,6 +93,9 @@ alias e='code'
 jq_flatten_json_files(){
   find . -name '*.json' -exec cat '{}' + | jq -s '. | flatten' "$@"
 }
+
+# Code
+alias code="code --user-data-dir $HOME/.config/Code/"
 
 # Docker
 alias d='docker'
