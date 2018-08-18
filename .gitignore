@@ -1,5 +1,14 @@
 *
+!.gitignore
 !.zshrc
 !.tmux.conf
 !start.sh
-!.gitignore
+!.config/
+!.config/Code/
+!.config/Code/User/
+!.config/Code/User/snippets/
+!.config/Code/User/snippets/*
+!.config/Code/User/keybindings.json
+!.config/Code/User/settings.json
+!.iterm
+!.iterm/com.googlecode.iterm2.plist

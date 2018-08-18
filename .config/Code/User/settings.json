@@ -1,0 +1,12 @@
+{
+    "git.ignoreLegacyWarning": true,
+    "editor.tabSize": 2,
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": true,
+    "workbench.colorTheme": "Atom One Dark",
+    "[elixir]": {
+    
+  },
+  "workbench.panel.location": "right",
+  "window.zoomLevel": 0
+}

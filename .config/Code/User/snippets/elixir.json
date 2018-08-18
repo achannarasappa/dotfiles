@@ -1,0 +1,93 @@
+{
+/*
+	// Place your snippets for Elixir here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"anonymous function": {
+		"prefix": "fn",
+		"body": [
+			"fn($1) ->",
+			"\t$2",
+			"end"
+		]
+	},
+	"short anonymous function": {
+		"prefix": "&",
+		"body": [
+			"&($1&1)"
+		]
+	},
+	"named function": {
+		"prefix": "def",
+		"body": [
+			"def $1($2) do\n",
+			"\t$2\n",
+			"end"
+		]
+	},
+	"pipeline": {
+		"prefix": "|",
+		"body": [
+			"\n|> $1"
+		]
+	},
+	"pipeline unary": {
+		"prefix": "||",
+		"body": [
+			"\n|> (&$1).()"
+		]
+	},
+	"module": {
+		"prefix": "defm",
+		"body": [
+			"defmodule $1 do\n",
+			"\t$2\n",
+			"end\n"
+		]
+	},
+	"test": {
+		"prefix": "test",
+		"body": [
+			"test \"$1\" do\n",
+			"\tassert $2 == $3\n",
+			"end\n"
+		]
+	},
+	"inspect": {
+		"prefix": "i",
+		"body": [
+			"\nIO.inspect $1\n"
+		]
+	},
+	"inspect pipe": {
+		"prefix": "|i",
+		"body": [
+			"\n|> IO.inspect"
+		]
+	},
+	"map key":{
+		"prefix": "k",
+		"body": [
+			"$1 => $2"
+		]
+	},
+	"map object":{
+		"prefix": "o",
+		"body": [
+			"%{",
+			"\t$1",
+			"}"
+		]
+	}
+}
