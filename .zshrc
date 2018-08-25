@@ -74,6 +74,10 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate # l
 # Integration
 ##
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 ##
 # Aliases
 ##
